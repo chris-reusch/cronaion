@@ -2,9 +2,12 @@
 import setuptools
 
 setuptools.setup(
-    name="Aion",
+    name="aion",
     version="1.0.0",
     author="Chris Reusch",
     description="Scheduler for python tasks.",
-    packages=["aion"]
+    packages=["aion"],
+    install_requires=[
+        "cron_converter",
+    ],
 )

@@ -5,11 +5,10 @@ import functools
 import logging
 import threading
 import time
+import logging
 from typing import Callable, List
 
 from cron_converter import Cron
-
-from base_runner_class import BaseRunner
 
 
 class TaskCron:
@@ -78,12 +77,20 @@ class TaskCron:
         return seconds_to_next
 
 
-class Aion(BaseRunner):
+class Aion:
 
     tasks: List[Callable] = None
 
-    def __init__(self, *args, **kwargs) -> None:
+    def __init__(
+        self,
+        logger=None,
+        *args,
+        **kwargs,
+    ) -> None:
         self.tasks = []
+
+        if logger is None:
+            self.logger = logging
 
         super().__init__(*args, **kwargs)
 
@@ -94,7 +101,7 @@ class Aion(BaseRunner):
 
                 func(*args, **kwargs)
 
-            self.logger.info(f"Appended func {func.__name__} to list to run.")
+            print(f"Appended func {func.__name__} to list to run.")
 
             task = TaskCron(
                 cron_schedule=cron,
