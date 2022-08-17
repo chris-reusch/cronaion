@@ -101,7 +101,7 @@ class Aion:
 
                 func(*args, **kwargs)
 
-            print(f"Appended func {func.__name__} to list to run.")
+            self.logger.info(f"Appended func {func.__name__} to list to run.")
 
             task = TaskCron(
                 cron_schedule=cron,
