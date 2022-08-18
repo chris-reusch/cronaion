@@ -1,6 +1,6 @@
 """Examples for Aion."""
 
-from aion import Aion
+from cronaion import Aion
 
 watcher = Aion()
 
