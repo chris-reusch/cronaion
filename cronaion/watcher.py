@@ -92,6 +92,9 @@ class Aion:
         if logger is None:
             self.logger = logging
 
+        else:
+            self.logger = logger
+
         super().__init__(*args, **kwargs)
 
     def watch(self, cron, raise_except=False):
