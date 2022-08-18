@@ -5,7 +5,6 @@ import functools
 import logging
 import threading
 import time
-import logging
 from typing import Callable, List
 
 from cron_converter import Cron
