@@ -12,7 +12,7 @@ def check_the_mail():
 
 @watcher.watch("*/1 * * * *")
 def blink_my_eyes():
-    print("I will run every 30 seconds.")
+    print("I will run every 60 seconds.")
 
 
 if __name__ == "__main__":
