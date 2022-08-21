@@ -3,7 +3,7 @@ import setuptools
 
 setuptools.setup(
     name="cronaion",
-    version="1.0.1",
+    version="1.0.2",
     author="Chris Reusch",
     description="Scheduler for python tasks.",
     packages=["cronaion"],
