@@ -6,12 +6,12 @@ watcher = Aion()
 
 
 @watcher.watch("1 3 * * 0")
-def restart_sonarr():
+def check_the_mail():
     print("I will run at 03:01 every Sunday.")
 
 
 @watcher.watch("*/1 * * * *")
-def restart_sonarr():
+def blink_my_eyes():
     print("I will run every 30 seconds.")
 
 
